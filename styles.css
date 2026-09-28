@@ -18,7 +18,7 @@ body {
     background: var(--paper);
     font: 1rem/1.5 Arial, sans-serif;
 }
-
+/* Keep the skip link offscreen until keyboard focus makes it visible, allowing users to bypass the navigation. */
 .skip-link {
     position: absolute;
     left: .5rem;
