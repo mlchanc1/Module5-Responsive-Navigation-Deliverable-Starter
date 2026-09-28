@@ -1,9 +1,154 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Navigation Plan and Evidence</title><style>body{max-width:75rem;margin:auto;padding:1rem;font:1rem/1.5 Arial,sans-serif}h1,h2{color:#8c1d40}table{width:100%;border-collapse:collapse}th,td{border:1px solid #999;padding:.55rem;text-align:left;vertical-align:top}th{background:#8c1d40;color:#fff}</style></head><body>
-<h1>Navigation Plan and Evidence</h1><p><strong>Student:</strong> [Name] &nbsp; <strong>Site:</strong> [Site name and purpose]</p>
-<h2>1. Priority tasks and content inventory</h2><ol><li>[Task]</li><li>[Task]</li><li>[Optional task]</li></ol><table><tr><th>Destination</th><th>Final label</th><th>Order/group rationale</th></tr><tr><td>[Destination]</td><td>[Label]</td><td>[Rationale]</td></tr></table>
-<h2>2. Breakpoint evidence</h2><p><strong>Method and widths tested:</strong> [Response]</p><p><strong>First content failure:</strong> [What happened and at what width?]</p><p><strong>Chosen breakpoint in relative units:</strong> [Response]</p><p><strong>Long-label and zoom retest:</strong> [Observed result and repair]</p>
-<h2>3. Interaction and failure test record</h2><table><tr><th>Condition</th><th>Expected</th><th>Observed</th><th>Result and repair</th></tr><tr><td>Keyboard: button, Tab, Escape, focus</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>Pointer/touch targets</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>320px and breakpoint region</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>200% zoom</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>JavaScript unavailable</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>CSS unavailable / wide recovery</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr></table><p><strong>Screenshot filenames and what each proves:</strong> [Response]</p>
-<h2>4. Peer task test</h2><p><strong>Tester relationship (no name needed):</strong> [Response]</p><p><strong>Two tasks attempted:</strong> [Response]</p><p><strong>What the tester did or said:</strong> [Direct observation]</p><p><strong>Change made or justified:</strong> [Response]</p>
-<h2>5. JavaScript code defense</h2><p>Explain initialization, state synchronization, activation, and Escape/focus behavior in your own words. Refer to the exact variable, attribute, dataset value, function, and event used.</p><p>[Response]</p>
-<h2>6. AI disclosure</h2><p><strong>Tool and purpose, or none:</strong> [Response]</p><p><strong>Prompt/task:</strong> [Response]</p><p><strong>Accepted, changed, or rejected output:</strong> [Response]</p><p><strong>How I verified it:</strong> [Tests and sources]</p>
-</body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Navigation Plan and Evidence</title>
+    <style>
+        body {
+            max-width: 75rem;
+            margin: auto;
+            padding: 1rem;
+            font: 1rem/1.5 Arial, sans-serif
+        }
+
+        h1,
+        h2 {
+            color: #8c1d40
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: .55rem;
+            text-align: left;
+            vertical-align: top
+        }
+
+        th {
+            background: #8c1d40;
+            color: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Navigation Plan and Evidence</h1>
+    <p><strong>Student:</strong> Maddy Chance &nbsp; <strong>Site:</strong> Explore Springfield - a visitor information site that helps users find things to do, food and drink, events, and support information for Springfield.</p>
+    <h2>1. Priority tasks and content inventory</h2>
+    <ol>
+        <li>Find things to do and upcoming events in Springfield.</li>
+        <li>Find local food and drink options for a visit.</li>
+        <li>Get support or helpful information when planning a visit.</li>
+</ol>
+    <table>
+        <tr>
+            <th>Destination</th>
+            <th>Final label</th>
+            <th>Order/group rationale</th>
+        </tr>
+        <tr>
+    <td>index.html</td>
+    <td>Home</td>
+    <td>Placed first because it returns users to the main starting point of the site.</td>
+</tr>
+<tr>
+    <td>visit.html</td>
+    <td>Visit</td>
+    <td>Placed near the beginning because planning a visit is one of the site's main purposes.</td>
+</tr>
+<tr>
+    <td>visit.html#things</td>
+    <td>Things to Do</td>
+    <td>Groups activities with the visit information so users can quickly find attractions and activities.</td>
+</tr>
+<tr>
+    <td>visit.html#food</td>
+    <td>Food &amp; Drink</td>
+    <td>Provides a clear destination for users looking for local dining options.</td>
+</tr>
+<tr>
+    <td>visit.html#events</td>
+    <td>Events</td>
+    <td>Helps visitors quickly locate information about upcoming events.</td>
+</tr>
+<tr>
+    <td>support.html</td>
+    <td>Get support</td>
+    <td>Placed last because it provides additional help after the primary planning destinations.</td>
+</tr>
+    </table>
+
+    <h2>2. Breakpoint evidence</h2>
+    <p><strong>Method and widths tested:</strong> I used Chrome DevTools Responsive mode and manually resized the viewport to test the navigation at multiple widths, including 320px, 628px, and 1100px.</p>
+    <p><strong>First content failure:</strong> The navigation links began to run out of horizontal space around 628px, so this was used as evidence that the layout needed to switch to the compact menu before the content became crowded.</p>
+    <p><strong>Chosen breakpoint in relative units:</strong> I used 64rem as the breakpoint so the navigation changes to the wide layout when enough horizontal space is available. Using rem keeps the breakpoint relative to the user's font size instead of relying on a fixed pixel value.</p>
+    <p><strong>Long-label and zoom retest:</strong> I tested the page at 200% zoom and with the longer navigation labels. The content remained readable and usable without overlapping or being cut off, so no additional repair was needed.</p>
+    <h2>3. Interaction and failure test record</h2>
+    <table>
+        <tr>
+            <th>Condition</th>
+            <th>Expected</th>
+            <th>Observed</th>
+            <th>Result and repair</th>
+        </tr>
+        <tr>
+            <td>Keyboard: button, Tab, Escape, focus</td>
+            <td>The Menu button and navigation links should be reachable with Tab, the menu should open with the keyboard, and Escape should close the menu and return focus to the Menu button.</td>
+            <td>Tab reached the Menu button and navigation links, the menu opened correctly, and pressing Escape closed the menu and returned focus to the Menu button.</td>
+            <td>Pass. Keyboard navigation, Escape behavior, and focus worked as expected.</td>
+        </tr>
+        <tr>
+            <td>Pointer/touch</td>
+            <td>The Menu button and navigation links should be easy to select with a mouse or touch input without accidental activation.</td>
+            <td>The Menu button opened and closed correctly with a pointer, and the navigation controls had comfortable spacing and target sizes.</td>
+            <td>Pass. No repair was needed.</td>
+        </tr>
+        <tr>
+            <td>320px viewport</td>
+            <td>The page should use the narrow navigation layout and remain readable without horizontal scrolling or overlapping content.</td>
+            <td>At a 320px CSS-pixel viewport, the Menu button remained visible, the heading and paragraph wrapped correctly, and the page stayed within the viewport.</td>
+            <td>Pass. No repair was needed.</td>
+        </tr>
+        <tr>
+            <td>200% zoom / narrow viewport</td>
+            <td>Content should remain readable and usable at 200% zoom and at a 320px viewport without horizontal scrolling or overlapping.</td>
+            <td>At 320px and 200% zoom, the content wrapped correctly, the Menu button remained usable, and there was no horizontal scrolling.</td>
+            <td>Pass. No repair was needed.</td>
+        </tr>
+        <tr>
+            <td>No JavaScript</td>
+            <td>All navigation links should remain visible and usable when JavaScript is unavailable.</td>
+            <td>The navigation links remained available as normal links without relying on the enhanced Menu button.</td>
+            <td>Pass. The baseline navigation remains usable without JavaScript.</td>
+        </tr>
+        <tr>
+            <td>CSS unavailable / wide recovery</td>
+            <td>The page content and navigation should remain available and usable if CSS is unavailable.</td>
+            <td>The page content, navigation links, and Skip to main content link remained available and usable.</td>
+            <td>Pass. The page remained functional, so no repair was needed.</td>
+        </tr>
+    </table>
+    <p><strong>Screenshot filenames and what each proves:</strong> 320px-responsive-navigation.png — Shows the narrow layout at a 320 CSS-pixel viewport with the Menu button visible and content fitting without horizontal overflow. 1100px-wide-navigation.png — Shows the wide layout at 1100px with all six navigation links visible horizontally and the Menu button hidden.</p>
+    <h2>4. Peer task test</h2>
+    <p><strong>Tester relationship (no name needed):</strong> A friend/family member</p>
+    <p><strong>Two tasks attempted:</strong> Find where to go on the site to look for things to do in Springfield.</p>
+    <p><strong>What the tester did or said:</strong> The tester started on the Home page and successfully found the Things to Do destination without assistance or noticeable confusion.</p>
+    <p><strong>Change made or justified:</strong> No repair was needed because the tester understood the navigation label and completed the task successfully.</p>
+    <h2>5. JavaScript code defense</h2>
+    <p>Explain initialization, state synchronization, activation, and Escape/focus behavior in your own words. Refer to
+        the exact variable, attribute, dataset value, function, and event used.</p>
+    <p>[Response]</p>
+    <h2>6. AI disclosure</h2>
+    <p><strong>Tool and purpose, or none:</strong> [Response]</p>
+    <p><strong>Prompt/task:</strong> [Response]</p>
+    <p><strong>Accepted, changed, or rejected output:</strong> [Response]</p>
+    <p><strong>How I verified it:</strong> [Tests and sources]</p>
+</body>
+
+</html>
