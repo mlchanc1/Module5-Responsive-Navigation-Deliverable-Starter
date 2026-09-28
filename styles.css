@@ -57,10 +57,12 @@ body {
 }
 
 .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
     list-style: none;
     margin: .75rem 0 0;
     padding: 0;
-    /* TODO: narrow layout. */
 }
 
 .nav-list a {
@@ -70,8 +72,30 @@ body {
     text-decoration: none;
 }
 
-/* TODO: hover, focus-visible, active, and aria-current styles. */
-/* TODO: hide only the enhanced, collapsed narrow list. */
+.nav-list a:hover {
+    background: var(--accent);
+    color: var(--ink);
+}
+
+.nav-list a:focus-visible,
+.menu-button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.nav-list a:active {
+    transform: translateY(1px);
+}
+
+.nav-list a[aria-current="page"] {
+    background: var(--paper);
+    color: var(--brand);
+    font-weight: 700;
+}
+
+.js .nav-list[hidden] {
+    display: none;
+}
 main,
 footer {
     width: min(100% - 2rem, var(--max));
@@ -83,4 +107,24 @@ main {
     padding-block: 2rem;
 }
 
-/* TODO: add the relative-unit breakpoint justified in navigation-plan.html. */
+@media (min-width: 64rem) {
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .nav-list,
+    .js .nav-list[hidden] {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .25rem;
+        margin: 0;
+    }
+}
