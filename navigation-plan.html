@@ -141,14 +141,12 @@
     <p><strong>What the tester did or said:</strong> The tester started on the Home page and successfully found the Things to Do destination without assistance or noticeable confusion.</p>
     <p><strong>Change made or justified:</strong> No repair was needed because the tester understood the navigation label and completed the task successfully.</p>
     <h2>5. JavaScript code defense</h2>
-    <p>Explain initialization, state synchronization, activation, and Escape/focus behavior in your own words. Refer to
-        the exact variable, attribute, dataset value, function, and event used.</p>
-    <p>[Response]</p>
+    <p>The navigation is initialized by adding the "js" class to the document, revealing the menu button, hiding the navigation list, and setting aria-expanded to "false". The setMenuState(isOpen) function keeps the menu's hidden state and the button's aria-expanded attribute synchronized. A click event on the menu button activates the menu and uses setMenuState() to open or close it. A keydown event listens for the Escape key, and when Escape is pressed while the menu is open, setMenuState(false) closes the menu and button.focus() returns focus to the menu button.</p>
     <h2>6. AI disclosure</h2>
-    <p><strong>Tool and purpose, or none:</strong> [Response]</p>
-    <p><strong>Prompt/task:</strong> [Response]</p>
-    <p><strong>Accepted, changed, or rejected output:</strong> [Response]</p>
-    <p><strong>How I verified it:</strong> [Tests and sources]</p>
+    <p><strong>Tool and purpose, or none:</strong> ChatGPT was used to help interpret the assignment's requirements, critique navigation labels and breakpoint choices, troubleshoot issues, and suggest HTML, CSS, and JavaScript changes. I made the final decisions and performed the required testing myself.</p>
+    <p><strong>Prompt/task:</strong> Asked ChatGPT for step-by-step help understanding the responsive navigation requirements, choosing and testing a breakpoint, checking accessibility and keyboard behavior, troubleshooting the menu, and explaining the JavaScript used for the responsive navigation.</p>
+    <p><strong>Accepted, changed, or rejected output:</strong> I accepted some suggestions after reviewing and testing them, and I changed suggestions when needed to fit my site and assignment requirements. I remained responsible for the final HTML, CSS, JavaScript, navigation labels, and breakpoint decisions.</p>
+    <p><strong>How I verified it:</strong> I tested the site myself in Chrome and Chrome DevTools at different viewport widths, including 320px and the breakpoint region. I also tested the menu with the keyboard, Escape key, focus behavior, pointer interaction, 200% zoom, JavaScript unavailable, and CSS unavailable. I used my own screenshots and observations as test evidence.</p>
 </body>
 
 </html>
